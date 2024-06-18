@@ -4,16 +4,23 @@
     <meta charset="UTF-8" />
     <title>Vue Mastery</title>
     <!-- Import Styles -->
+    <!-- CSSファイルの書式等をメインの画面に適用するためのコマンド-->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+    <!-- Vue.jsのライブラリをメインの画面に適用するためのコマンド-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <div id="app">
-      <h1>Product goes here</h1>
+      <h1>{{product}}</h1>
     </div>
 
-    <!-- Import Js -->
+    <!-- Import APP -->
     <script src="./main.js"></script>
+
+    <!-- 作成したアプリをDOMにマウントする必要があります-->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
   </body>
 </html>
