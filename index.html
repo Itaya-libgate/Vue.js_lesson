@@ -12,7 +12,23 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{product}}</h1>
+      <div class="nav-bar"></div>
+
+      <div class="product-display">
+        <div class="product-container">
+          <div class="product-image">
+            <!--ここにイメージを記述する-->
+            <img v-bind:src="image"><!-- <img :src="image">の省略形でも行ける -->
+          </div>
+          <div class="product-info">
+            <h1>{{product}}</h1>
+            <!-- vue.js上で条件分岐を行う -->
+            <p v-if="inventory > 10">In Stock</p>
+            <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+            <p v-else>Out of Stock</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Import APP -->
