@@ -26,6 +26,12 @@
             <p v-if="inventory > 10">In Stock</p>
             <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
             <p v-else>Out of Stock</p>
+            <!-- Vue.jsで記述した配列の値をHTML上で表示させる -->
+            <ul>
+              <li v-for="detail in details">{{detail}}</li>
+            </ul>
+            <!-- HTML上に配列の値をHTML上で表示させるが、keyを設定してあげても一意で色を把握することができる。 -->
+            <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
           </div>
         </div>
       </div>
